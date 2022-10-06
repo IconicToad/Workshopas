@@ -1,0 +1,15 @@
+<div class="app-folder-display">
+  <div class="app-folder-display__header">header</div>
+
+ <div class="app-folder-display__content-wrapper">
+   <div class="app-folder-display__sidebar">sidebar</div>
+   <div class="app-folder-display__content">
+      <div *ngFor="let item of modalValue" (click)="makeParent(item.id)">
+        {{ item.name }}
+        <tree-item [items]="item" (parent)="makeParent($event)">
+        </tree-item>
+      </div>
+
+   </div>
+ </div>
+</div>

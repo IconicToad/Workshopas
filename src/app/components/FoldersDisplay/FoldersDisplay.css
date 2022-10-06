@@ -1,0 +1,38 @@
+.app-folder-display {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+.app-folder-display__header {
+  display: flex;
+  width: 100%;
+  border-bottom: 5px solid black;
+  margin-top: 20px;
+  font-size: 25px;
+  font-variant: all-petite-caps;
+  justify-content: center;
+}
+
+.app-folder-display__content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.app-folder-display__sidebar {
+  display: flex;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  width: 300px;
+  border: 1px black;
+  /*height: 500000px*/
+}
+
+.app-folder-display__content-wrapper {
+  display: flex;
+  flex-direction: row;
+  border: 1px black;
+  flex: 1;
+}

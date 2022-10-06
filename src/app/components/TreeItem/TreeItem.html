@@ -1,0 +1,8 @@
+<div *ngFor="let item of items.childs" (click)="onClick(items.parentID)">
+  {{ item.name }}
+  <tree-item *ngIf="item.childs.length !== 0" [items]="item" (parent)="onClick(item.parentId)">
+  </tree-item>
+</div>
+
+//sutvarkyti item kurima padaryt su rekursija
+//monikai pasigooglint jei ne tai bus pzda 
