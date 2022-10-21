@@ -13,11 +13,16 @@ export class FoldersDisplay implements OnInit {
     private folderService: FolderService
      ) {
     }
-    public ngOnInit(): void {}
+    public ngOnInit(): void {
+    this.folderService.parentId.subscribe((k:number) => {
+    console.log(k);
+    this.parent.emit(k);
+    })
+    }
 
     public makeParent(parentId: number): void {
-      this.parent.emit(parentId);
-      console.log(parentId);
+//       this.parent.emit(parentId);
+//       console.log(parentId);
     }
     //todo make this parent work
     //todo reusable component kur piesia child aka pradzia infinity loop
